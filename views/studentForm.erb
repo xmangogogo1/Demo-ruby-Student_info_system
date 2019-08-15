@@ -1,0 +1,41 @@
+<h1>Student information </h1>
+
+      <div class="col-25">
+            <label> First Name </label> 
+      </div>
+
+      <dvi class="col-75">
+            <input type="text" name = "student[fn]" value = "<%= @student.fn%>" required /><br>
+      </dvi>
+
+      <div class="col-25">
+            <label> Last Name </label> 
+      </div>
+
+
+      <input type="text" name =  "student[ln]"  value = "<%= @student.ln%>" required /><br>
+      
+       <div class="col-25"> 
+            <label> Birthday </label> 
+       </div>
+       
+       <input type="date" name=  "student[bd]" value = "<%= @student.bd%>" /><br>
+    
+        <div class="col-25"> 
+            <label> Class </label> 
+      </div>
+       <input type="text" name=  "student[classes]" value = "<%= @student.classes%>" /><br>
+
+      <div class="col-25">
+            <label> Introduction </label> 
+      </div>
+      
+      <input type="text" name= "student[intro]" value = "<%= @student.intro%>" /><br>
+    
+      <br>
+      <br>
+      <input class="submit" type="submit" name="submit" value = "Save" />
+
+
+
+

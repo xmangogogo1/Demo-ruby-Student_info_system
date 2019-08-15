@@ -1,0 +1,31 @@
+
+ <html>
+  <head>
+
+  <link href="styles.css" rel="stylesheet" type="text/css">
+  <title> <%= @title  || "Welcome " %> </title>
+  </head>
+  <body>
+     <img src="images/pic.png" alt="info-logo" width = 700 height= 400  />  
+       <ul id = "column">
+    <li id = "colli"> <a href="/" id= "cola">Home</a></li>
+    <li id = "colli" > <a href="/about" id= "cola" >About</a></li>
+    <li id = "colli" > <a href="/contact" id= "cola">Contact</a></li>
+    <li  id = "colli"> <a href ="/students" id= "cola">Students </a></li>
+    <li  id = "colli"> <a href ="/comments" id= "cola">Comment </a></li>
+    <li  id = "colli"> <a href ="/video" id= "cola">Video </a></li>
+    <li  id = "colli"> <a href ="/logout" id= "cola">LogOut </a></li>
+       </ul>
+
+      <div id = "main">
+
+      </div>
+      <%=yield%>
+<hr>
+  </body>
+
+<div id="footer"> 
+    Copy Right &copy; 2018 xmango
+</div>
+ 
+  </html>

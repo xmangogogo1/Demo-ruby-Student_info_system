@@ -1,0 +1,12 @@
+ <ul>
+ 	<% @comments.each do |cmt|  %>
+ 	    <li> <a href= "/comment/<%=cmt.id%>"> <%= cmt.comment.bytesize > 50 ? cmt.comment[0..50] : cmt.comment%> </a> - <%=cmt.created_at%>  
+ 	    </li>
+
+ 	<% end %>
+
+ </ul>	
+
+
+<button> <a href= "/comment/create">Create new comment </a> </button>
+

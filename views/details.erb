@@ -1,0 +1,50 @@
+<h1> Student Introduction </h1>
+
+<p> <%=@student.fn %>  <%=@student.ln %> 
+<br> from class: <%=@student.classes %></p>
+
+<p>Introduce myself</p>
+<%=@student.intro %>
+<br />
+<br />
+	
+<ul>
+	
+
+
+	<button>	
+		<a href= "/student/<%=@student.id%>/edit" class="button" data-method="PUT">Edit</a>   <br />
+	</button>	 
+	
+
+
+
+	<form onsubmit="confirm('Are you sure to delete this student: <%=@student.fn%> <%=@student.ln%>,id=<%=@student.id%>?')" action="/student/<%=@student.id%>"  method="POST">	
+		
+		<input type="hidden" name="_method" value="DELETE" />
+		<button type="submit">Delete</button><br />
+	</form>
+	
+
+<!-- need to write ajax . https://stackoverflow.com/questions/31300548/add-logic-to-delete-method-in-sinatra
+	<%def confirmDelete()%>
+		<% if (!form_valid)%> 
+			<a href= '/get/student/<%=@student.id%>'%>
+			<%return false%>
+		<%end%>
+		<%return true%>
+	<%end%>
+-->
+
+
+	<!--button>	
+		<a href= "/student/<%=@student.id%>/edit" class="button" data-method="Delete">Delete2 </a>
+	</button-->	 
+
+
+
+
+	<button class="backbutton">	
+		<a href= "/students">Back To List</a><br />
+	</button>
+</ul>

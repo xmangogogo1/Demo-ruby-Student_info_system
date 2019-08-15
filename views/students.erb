@@ -1,0 +1,22 @@
+<h1> Students List</h1>
+<ul>
+
+	<% if @students.size != 0%>	
+		<% @students.each do |student| %>
+
+		<!-- when click, it goes to the link /song/#id -->
+		<li id ="stuli"> <a href= "/student/<%= student.id %>"> <%= student.fn %>   <%= student.ln %></a> </li> 
+		
+		<%end%>
+	<% else %>
+		<p> Database is empty</p>
+
+	<%end%>
+	<button> 
+		<a href= "/student/create">Create new student </a> 
+	</button>
+
+</ul>
+
+
+
